@@ -1,0 +1,19 @@
+When spacing a non-text element on HTML, is it better to use <p> or <div> or both. I noticed that <div> doesn't space very well.
+Separating attributes. Seems to work with/without comma, what is your preference?
+What is markup?
+Double quotes/single quotes compatability-wise with CSS and JS?
+<!DOCTYPE html>. My code seems to run without this?
+Meta charset in head?
+Link javascript in footer or end of body?
+How to know when something is an empty element or not, other than documentation?
+
+
+
+// some random css that loads by default
+.thiscss {thingsss}
+
+.morecss {sdfgsdgsdg}
+
+.div{background-image:image-url};
+
+

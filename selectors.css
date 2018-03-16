@@ -1,0 +1,36 @@
+#special{
+	border: rgb(0,40,100) 2px solid;
+}
+
+div p{
+	font-size: 25px;
+}
+
+input[type="text"]{
+	background: gray;
+}
+
+div:nth-of-type(3) p{
+	background: pink;
+}
+
+input[checkbox checked]{
+	margin-left: 50px;
+}
+
+label{
+	text-transform: uppercase;
+}
+
+#special::first-letter{
+	color: green;
+	font-size: 100px;
+}
+
+h1:hover{
+	color: blue;
+}
+
+a[href="google.com"]:visited{
+	color: gray;
+}

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>This is a title</title>
+		<meta name="author" content="Sunchips Mendips">
+		<meta name="description" content="This is just a test, sorry folks.">
+
+		<meta property="og:description" content="This is what shows up when someone shares this on facebook, because og is OpenGraph?">
+		
+		<meta property="og:title" content="The title of my infamous page, as shared">
+
+		<link rel="shortcut icon" href="favicon-32x32.png" type="image/x-icon">
+
+		<link rel="stylesheet" type="text/css" href="app.css">
+
+	</head>
+
+	<body>
+		<header>
+		<h1>
+			Rusty Steele
+		</h1>
+		</header>
+
+		<nav>
+      		<ul>
+        		<li><a href="#">Home</a></li>
+        		<li><a href="#">Our team</a></li>
+    			<li><a href="#">Projects</a></li>
+    			<li><a href="#Contact">Contact</a></li>
+      		</ul>
+
+       <!-- A Search form is another commmon non-linear way to navigate through a website. -->
+
+       		<form>
+         		<input type="search" name="q" placeholder="Search query">
+         		<input type="submit" value="Click here you ponce">
+       		</form>
+     	</nav>
+
+		<p>
+			Hi, I'm a dog. Woof!
+		</p>
+
+		<a href="https://www.google.com" target="_blank" title="GOOGURU">
+			This goes to google.
+		</a>
+
+		<p>
+		<input type="text" name="Some input type">
+
+		<input type="text" disabled>
+
+		<input type="text" disabled="disabled">
+		</p>
+
+		<h2 id="Secondary_heading">
+			This is some secondary heading
+		</h2>
+
+		<p>
+			<strong>These are </strong> <em>inline formatting <u>options.</u></em>
+		</p>
+
+		<p>
+			Gimme some special signs
+			<ul>
+				<li>
+				<input type="checkbox" name="">
+				This is an &lt;</li>
+				<li>
+				<input type="checkbox" name="">
+				&gt; &quot; &apos; &amp;</li>
+				<li>
+					<input type="checkbox" name="" checked>
+					Interesting how there is spacing, eventhough this is still in the <em>p</em> environment.</li>
+			</ul>
+		</p>
+
+		<!-- This is a comment -->
+
+		<p> This is some text which I want to <a href="#Secondary_heading"> link </a> to the secondary heading. </p>
+
+		<p>
+			This is some <a href="text.txt" download="download-text.txt"> downloadable text file </a>.
+		</p>
+
+		<p><a href="mailto:sachith.mendis@gmail.com?cc=sonal.cmendis@gmail.com&subject=This is a test email&body=This was done using mailto">Email me!</a></p>
+
+		<dl>
+			<dt>This is a description title. (Not) Slightly bolded, but not too big or anything I hope.</dt>
+			<dd>This is where I describe this thing I just introduced above, in much more detail. This is kinda like a dictionary kinda thing. What's important is the indentation thing. This could be useful.</dd>
+		</dl>
+
+		<hr>
+
+		<blockquote class="class1">
+			I've done did a lot of shit just to live this here lifestyle<br>
+			We came straight from the bottom to the top, my lifestyle<br>
+			Nigga livin' life like a beginner and this is only beginnin'<br>
+			I'm on the top of the mountain, puffin' on clouds and niggas still beginnin'
+		</blockquote>
+
+		<hr>
+
+		<p>So this is what <abbr title="abbreviation">abbr</abbr> does.</p>
+
+		<address class="class1">
+  		<p>Sachith, The room upstairs</p>
+		</address>
+
+		<h2 id="Contact">
+			This is Contact
+		</h2>
+
+    	<div id="div1">
+    		<p><code>&lt;div&gt;</code> is a <em>block</em>-level non-semantic element, whereas <code>&lt;span&gt;</code> is an <strong>in-line</strong> level non-semantic element. They are both to be used when a better semantic tag does not exist, but only then!<br>
+    		Divs also allow you to group things together. Span is also a generic container but lets you do this in-line.</p>
+    	</div>
+
+    	<div id="div2">
+    		<p>An ID selector allows your CSS to call a single element. A class selector allows your CSS to call multiple elements in the same class.</p>
+    	</div>
+
+		<a href="page2.html">This goes to page 2.</a>
+
+		<table border="1">
+
+			<thead>			<tr>
+				<th>Good colours</th>
+				<th>Bad colours</th>
+			</tr></thead>
+
+			<tbody>
+			<tr>
+				<td>Red</td>
+				<td>Orange</td>
+			</tr>
+			<tr>
+				<td>Green</td>
+				<td>Yellow</td>
+			</tr></tbody>
+			
+		</table>
+
+		<!-- Form action is the location -->
+		<!-- Form method is HTTP action - get/post -->
+
+		<form action="http://bbc.com" method="get">
+			<input type="text" name="Name" placeholder="Name" id="username">
+			<label>DOB:<input type="date" name="DOB"></label>
+			<label>Password:<input type="password" name="Password" placeholder="Password" required></label>
+			<input type="submit" name="">
+			<label for="username">Username:</label>
+
+		</form>
+
+		<form action="page2.html" method="get">
+			<label for="One">One</label>
+			<input id = "One" type="color" name="">
+			<label for="Two">Two</label>
+			<input id="Two" type="radio" name="choice" value="two">
+			
+			<label for="Three">Three</label>
+			<input id="Three" type="radio" name="choice" value="three">
+
+
+			<select name="dropdown">
+				<option>Bird's</option>
+				<option>Bee's</option>
+				<option>Bird's and the bee's</option>
+			</select>
+
+			<textarea name="paragraph" rows="10" cols="10">
+				
+			</textarea>
+
+			<button>Submit button</button>
+			<input type="submit" value="Submit input" name="">
+			<input type="email" name="email" id="email" required>
+
+		</form>
+
+
+	    <footer>
+      		<p>©Copyright 2050 by nobody. All rights reversed.</p>
+    	</footer>
+
+	</body>
+</html>

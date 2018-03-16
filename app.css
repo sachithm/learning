@@ -1,0 +1,27 @@
+h1{
+	color:green;
+	border-color: #000000;
+	border-width: 5px;
+	border-style: solid;
+}
+
+li{
+	color: rgba(100,100,0,.8);
+	background: pink;
+	border: 1px dashed purple;
+}
+
+body{
+	background: url(http://i0.kym-cdn.com/photos/images/facebook/000/063/660/The_Biting_Pear_of_Salamanca_by_ursulav.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#div1{
+	background: orange;
+}
+
+.class1{
+	border: 1px solid black;
+	text-decoration: underline;
+}

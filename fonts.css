@@ -1,0 +1,35 @@
+#fontspart p {
+	font-family: slabo 27;
+	font-size: 1.5em;
+	font-weight: 100;
+	line-height: 1.15;
+	text-align: justify;
+	text-decoration: overline;
+}
+
+#fontspart h1 {
+	font-family: krona one;
+}
+
+#fontspart h1 {
+	font-size: 5em;
+	text-align: center;
+	text-decoration: underline;
+}
+
+#fontspart span {
+	font-size: 2em;
+}
+
+body {
+	font-size: 10px;
+}
+
+#boxmodel p {
+	font-size: 1.5em;
+	border: 2px solid blue;
+	width: 25%;
+	/*Padding goes clockwise trbl*/
+	padding: 5px 10px 5px 10px; 
+	margin: 25px;
+}

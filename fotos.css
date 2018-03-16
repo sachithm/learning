@@ -1,0 +1,18 @@
+img {
+	width: 30%;
+	float: left;
+	margin: 1.66%;
+}
+
+h1 {
+	font-family: 'Fjalla One', sans-serif;
+	margin: 3% auto auto 1.66%;
+	text-transform: uppercase;
+	width: 30%;
+	border-bottom: 1px solid #f1f1f1;
+	padding-bottom: 20px;
+}
+
+#shorty {
+	margin-bottom: 5.5%;
+}
