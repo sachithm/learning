@@ -34,6 +34,6 @@ function max(arr) {
 		}
 	}
 
-	console.log(max);
+	return max;
 
 }

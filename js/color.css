@@ -1,0 +1,75 @@
+body {
+	background-color: #232323;
+	margin: 0;
+	font-family: 'IBM Plex Sans Condensed', sans-serif;
+}
+
+.container {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	width: 660px;
+	margin: 25px auto;
+}
+
+.square {
+	width: 200px;
+	background-color: purple;
+	padding-bottom: 200px;
+	margin: 10px;
+	border-radius: 25%;
+	transition: background-color 0.5s;
+	webkit-transition: background-color 0.5s;
+	moz-transition: background-color 0.5s;
+}
+
+h1 {
+	color: white;
+	text-align: center;
+	background-color: steelblue;
+	margin: 0;
+	font-weight: 400;
+	text-transform: uppercase;
+	line-height: 1.1;
+	padding: 20px 0;
+	transition: background-color 0.5s;
+}
+
+.stripe {
+	background-color: white;
+	height: 30px;
+	text-align: center;
+}
+
+.selected {
+	background-color: steelblue;
+	color: white;
+}
+
+.colorDisplay {
+	font-size: 180%;
+}
+
+button {
+	border: none;
+	background: none;
+	text-transform: uppercase;
+	height: 100%;
+	font-weight: 700;
+	color: steelblue;
+	letter-spacing: 1px;
+	font-size: inherit;
+	transition: all 0.25s;
+	outline: none;
+}
+
+button:hover {
+	color: white;
+	background-color: steelblue;
+}
+
+.message {
+	display: inline-block;
+	width: 20%;
+}
