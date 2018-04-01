@@ -1,0 +1,107 @@
+body {
+	background-color: #232323;
+	margin: 0;
+	font-family: 'IBM Plex Sans Condensed', sans-serif; 
+}
+
+h1 {
+	color: white;
+	text-align: center;
+	background-color: #2E91B3;
+	margin: 0;
+	font-size: 56px;
+	padding: 20px 0;
+	transition: background-color 0.5s
+}
+
+.h11 {
+	text-transform: uppercase;
+	font-size: 72px;
+	letter-spacing: -2px;
+}
+
+.h12 {
+	font-size: 40px;
+}
+
+.bar {
+	height: 30px;
+}
+
+.score {
+	margin: 5px auto;
+	color: green;
+	font-size: 36px;
+	text-align: center;
+	font-weight: 700;
+	transition: 0.3s;
+}
+
+.scoreloss {
+	margin: 5px auto;
+	color: #B81212;
+	font-size: 36px;
+	text-align: center;
+	font-weight: 700;
+	transition: 0.3s;
+}
+
+.game {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto;
+}
+
+.cols {
+	width: 175px;
+	height: 400px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+button {
+	width: 125px;
+	height: 25px;
+	border: none;
+	background: none;
+	background-color: #2E2C2C;
+	font-weight: 700;
+	color: white;
+	border-radius: 5%;
+	letter-spacing: 0.2px;
+	font-size: 15px;
+	transition: all 0.25s;
+	outline: none;
+	line-height: 0.85;
+}
+
+.space {
+	margin-bottom: 10px;
+}
+
+.space1 {
+	margin-bottom: 53px;
+}
+
+.space2 {
+	margin-bottom: 156px;
+}
+
+.cent {
+	padding: 10px 0;
+}
+
+.winner {
+	background-color: green;
+}
+
+.loser {
+	background-color: #B81212;
+}
+
+.faded {
+	background-color: steelblue;
+}
