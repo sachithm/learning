@@ -7,10 +7,32 @@
 </head>
 <body>
 
-<h1><span class="h11"> Population Playoffs</span></br><span class = "h12">Sri Lanka</span></h1>
+<h1><span class="h11"> Population Playoffs</span></h1>
+
+<div class="stripe">
+	<button class="reset">Reset</button>
+	<div class="stripe dropdown">
+		<button class="country dropbtn">Country</button>
+	  		<div class="dropdown-content">
+				<p class="sriLankaBtn">Sri Lanka</p>
+				<p class="indiaBtn">India</p>
+		  	</div>
+	</div>
+	<div class="stripe dropdown">
+		<button class="dropbtn dataType">Demarcation</button>
+	  		<div class="dropdown-content">
+				<p class="sriLankaBtn">Districts</p>
+				<p class="indiaBtn">States</p>
+		  	</div>
+	</div>
+</div>
 
 <div class="bar">
 <p class="score"></p>
+</div>
+
+<div class="counter">
+	<p class="population"></p>
 </div>
 
 <div class="game">
@@ -63,7 +85,7 @@
 
 
 	<!-- Centre -->
-	<div class="cols">
+	<div class="cols centcol">
 		<button class="inactive cent"></button>
 		<button class="inactive cent"></button>
 		<button class="inactive cent"></button>
@@ -118,8 +140,8 @@
 </div>
 
 
-
-<script type="text/javascript" src="srilanka.js"></script>
+<script type="text/javascript" src="data.js"></script>
+<script type="text/javascript" src="app.js"></script>
 
 </body>
 </html>

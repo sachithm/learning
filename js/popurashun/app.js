@@ -1,109 +1,3 @@
-// Sri Lanka 20,359,439
- 
-var districts = [
- 
-	 {
-	 	name: "Colombo", 
-	 	pop: 2324349
-	 },
-	 {
-	 	name: "Gampaha",
-	 	pop: 2304833
-	 },
-	 {
-	 	name: "Kalutara", 
-	 	pop: 1221948
-	 },
-	 {
-	 	name: "Kandy", 
-	 	pop: 1375382
-	 },
-	 {
-	 	name: "Matale", 
-	 	pop: 484531
-	 },
-	 {
-	 	name: "Nuwara Eliya", 
-	 	pop: 711644
-	 },
-	 {
-	 	name: "Galle", 
-	 	pop: 1063334
-	 },
-	 {
-	 	name: "Matara", 
-	 	pop: 814048
-	 },
-	 {
-	 	name: "Hambantota", 
-	 	pop: 599903
-	 },
-	 {
-	 	name: "Jaffna", 
-	 	pop: 583882
-	 },
-	 {
-	 	name: "Mannar", 
-	 	pop: 99570
-	 },
-	 {
-	 	name: "Vavuniya", 
-	 	pop: 172115
-	 },
-	 {
-	 	name: "Mullaitivu", 
-	 	pop: 92238
-	 },
-	 {
-	 	name: "Kilinochchi",
-	 	pop: 113510
-	 },
-	 {
-	 	name: "Batticaloa",
-	 	pop: 526567
-	 },
-	 {
-	 	name: "Ampara",
-	 	pop: 649402
-	 },
-	 {
-	 	name: "Trincomalee",
-	 	pop: 379541
-	 },
-	 {
-	 	name: "Kurunegala",
-	 	pop: 1618465
-	 },
-	 {
-	 	name: "Puttalam",
-	 	pop: 762396
-	 },
-	 {
-	 	name: "Anuradhapura",
-	 	pop: 860575
-	 },
-	 {
-	 	name: "Polonnaruwa",
-	 	pop: 406088
-	 },
-	 {
-	 	name: "Badulla",
-	 	pop: 815405
-	 },
-	 {
-	 	name: "Moneragala", 
-	 	pop: 451058
-	 },
-	 {
-	 	name: "Ratnapura",
-	 	pop: 1088007
-	 },
-	 {
-	 	name: "Kegalle",
-	 	pop: 840648
-	 }
-
- ];
 
 var buttsl = document.querySelectorAll(".outl");
 var buttsr = document.querySelectorAll(".outr");
@@ -114,14 +8,31 @@ var buttsTwoR = document.querySelectorAll(".twor");
 var buttsThrL = document.querySelectorAll(".thrl");
 var buttsThrR = document.querySelectorAll(".thrr");
 var buttsCent = document.querySelectorAll(".cent");
-
 var score = document.querySelector(".score");
 var h1 = document.querySelector("h1");
+var ticker = 0;
+var districts = [];
+var countryBtn = document.querySelector(".country");
+var dataTypeBtn = document.querySelector(".dataType")
+var sriLankaBtn = document.querySelector(".sriLankaBtn");
+var indiaBtn = document.querySelector(".indiaBtn");
+var population = document.querySelector(".population");
+var popCounter = 0;
+
+indiaBtn.addEventListener("click", indiaStat);
+sriLankaBtn.addEventListener("click", sriLankaDist);
+
+
+
+
+
+score.textContent = "Which " + sriLankaDistricts[0].dataType + " of " + sriLankaDistricts[0].country + " have the largest populations?";
+
+
+sriLankaDist();
 
 var winners = [];
 var distrObOne = [];
-var ticker = 0;
-
 // Takes HTML divs for outer columns and puts them into one array
 var buttsArr = nodeKiller(buttsl,buttsr);
 
@@ -137,6 +48,10 @@ var buttsThrArr = nodeKiller(buttsThrL,buttsThrR);
 // Centre
 var buttsCentArr = [];
 var buttsFin = [];
+buttsCentArr[0] = buttsCent[0];
+buttsCentArr[1] = buttsCent[2];
+buttsFin[0] = buttsCent[1];
+
 // var notCent = [];
 
 // for (var i = buttsArr.length - 1; i >= 0; i--) {
@@ -154,17 +69,6 @@ var buttsFin = [];
 // for (var i = buttsThrArr.length - 1; i >= 0; i--) {
 // 	notCent[i+buttsArr.length+buttsOneArr.length+buttsTwoArr.length] = buttsThrArr[i];
 // };
-
-buttsCentArr[0] = buttsCent[0];
-buttsCentArr[1] = buttsCent[2];
-buttsFin[0] = buttsCent[1];
-// for (var i = buttsl.length - 1; i >= 0; i--) {
-// 	buttslArr[i] = buttsl[i];
-// 	buttsrArr[i] = buttsr[i];
-// }
-// var buttsArr = Array.prototype.concat.call(buttslArr, buttsrArr);
-
-
 
 
 // Shuffles districts array
@@ -185,11 +89,11 @@ if (districts.length < 32) {
 };
 
 
+
 // Assigns (randomized) names to HTML outer divs
 for (var i = districts.length - 1; i >= 0; i--) {
 	buttsArr[i].textContent = (districts[i].name);
 };
-
 
 // Splits buttsArr(s) in pairs, compares for larger one in each pair, creates list of 'winners' for each pair
 splitButtsArr = splitPairs(buttsArr);
@@ -226,7 +130,6 @@ var winCent = wOn[0];
 var distrObFin = wOn[1];
 distrObFin.reverse();
 
-
 // Listens for clicks, and checks whether click was winner, adds to tier-one, adds colours
 clicksAhoy(buttsArr,winners,buttsOneArr,districts);
 
@@ -241,9 +144,6 @@ clicksAhoy(buttsThrArr,winThr,buttsCentArr,distrObThr);
 
 // Centre
 clicksAhoy(buttsCentArr,winCent,buttsFin,distrObCent);
-
-
-
 
 
 function shuffleArray(arr) {
@@ -307,6 +207,10 @@ function clicksAhoy(listenArr,winArr,pushArr,obj) {
 					h1.style.backgroundColor = "green"
 					score.textContent = "CORRECT!!! Your score is currently:  " + ticker;
 					score.classList.remove("scoreloss");
+					score.classList.remove("score");
+					score.classList.add("scoreplus");
+					popCounter = popCounter + obj[index].pop;
+					population.textContent = popCounter;
 
 
 					if (index % 2 === 0) {
@@ -349,11 +253,16 @@ function clicksAhoy(listenArr,winArr,pushArr,obj) {
 				} else if (!listenArr[index].classList.contains("inactive")) {
 					h1.style.backgroundColor = "#B81212"
 					score.textContent = "WRONG!!! Your score is currently:  " + ticker;
+					score.classList.remove("score");
+					score.classList.remove("scoreplus");
 					score.classList.add("scoreloss");
-					listenArr[index].classList.add("inactive");
+
 
 					if (index % 2 === 0) {
 
+						popCounter = popCounter + obj[index+1].pop;
+						population.textContent = popCounter;
+						
 						pushArr[(index/2)].classList.add("primed");
 						if (index % 4 === 2 && pushArr[(index/2)-1].classList.contains("primed")) {
 							pushArr[(index/2)].classList.remove("inactive");
@@ -371,6 +280,10 @@ function clicksAhoy(listenArr,winArr,pushArr,obj) {
 							listenArr[index+1].classList.add("faded", "inactive");
 						};
 					} else if (index % 2 === 1) {
+						
+
+						popCounter = popCounter + obj[index-1].pop;
+						population.textContent = popCounter;
 						
 						pushArr[(index-1)/2].classList.add("primed");
 
@@ -392,4 +305,16 @@ function clicksAhoy(listenArr,winArr,pushArr,obj) {
 			});
 		})(i)
 	};;
+};
+
+function sriLankaDist() {
+	for (var i = sriLankaDistricts.length - 2; i >= 0; i--) {
+		districts[i] = sriLankaDistricts[i + 1];
+	};
+};
+
+function indiaStat() {
+	for (var i = indiaStates.length - 2; i >= 0; i--) {
+		districts[i] = indiaStates[i + 1];
+	};
 };
