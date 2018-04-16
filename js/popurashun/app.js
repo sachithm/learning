@@ -19,8 +19,13 @@ var indiaBtn = document.querySelector(".indiaBtn");
 var population = document.querySelector(".population");
 var popCounter = 0;
 
-indiaBtn.addEventListener("click", indiaStat);
-sriLankaBtn.addEventListener("click", sriLankaDist);
+indiaBtn.addEventListener("click", function() {
+	indiaStat();
+});
+
+sriLankaBtn.addEventListener("click", function() {
+	sriLankaDist();
+});
 
 
 
@@ -308,13 +313,98 @@ function clicksAhoy(listenArr,winArr,pushArr,obj) {
 };
 
 function sriLankaDist() {
+	districts = [];
+
 	for (var i = sriLankaDistricts.length - 2; i >= 0; i--) {
 		districts[i] = sriLankaDistricts[i + 1];
 	};
+
+	// Shuffles districts array
+	shuffleArray(districts);
+
+
+	// Adds extra objects to districts so as to make sure we have 32, NEED TO FIX EMPTY BUTTON ORDER
+	if (districts.length < 32) {
+		for (var i = (32 - districts.length); i > 0; i--) {
+
+			index = Math.floor(Math.random() * 32);
+
+			districts.splice(index, 0, {
+				name: "No-one :(",
+				pop: 0
+			});
+		};
+	};
+
+	init();
 };
 
 function indiaStat() {
+	districts = [];
+
 	for (var i = indiaStates.length - 2; i >= 0; i--) {
 		districts[i] = indiaStates[i + 1];
 	};
+
+	// Shuffles districts array
+	shuffleArray(districts);
+
+
+	// Adds extra objects to districts so as to make sure we have 32, NEED TO FIX EMPTY BUTTON ORDER
+	if (districts.length < 32) {
+		for (var i = (32 - districts.length); i > 0; i--) {
+
+			index = Math.floor(Math.random() * 32);
+
+			districts.splice(index, 0, {
+				name: "No-one :(",
+				pop: 0
+			});
+		};
+	};
+
+	init();
 };
+
+function init() {
+
+	// Assigns (randomized) names to HTML outer divs
+	for (var i = districts.length - 1; i >= 0; i--) {
+		buttsArr[i].textContent = (districts[i].name);
+	};
+
+	// Splits buttsArr(s) in pairs, compares for larger one in each pair, creates list of 'winners' for each pair
+	splitButtsArr = splitPairs(buttsArr);
+	createWinners(splitButtsArr,districts);
+	var winners = wOn[0];
+	var distrObOne = wOn[1];
+	distrObOne.reverse();
+
+	// Tier-One
+	splitButtsOneArr = splitPairs(buttsOneArr);
+	createWinners(splitButtsOneArr,distrObOne);
+	var winOne = wOn[0];
+	var distrObTwo = wOn[1];
+	distrObTwo.reverse();
+
+	// Tier-Two
+	splitButtsTwoArr = splitPairs(buttsTwoArr);
+	createWinners(splitButtsTwoArr,distrObTwo);
+	var winTwo = wOn[0];
+	var distrObThr = wOn[1];
+	distrObThr.reverse();
+
+	// Tier-Three
+	splitButtsThrArr = splitPairs(buttsThrArr);
+	createWinners(splitButtsThrArr,distrObThr);
+	var winThr = wOn[0];
+	var distrObCent = wOn[1];
+	distrObCent.reverse();
+
+	// Centre
+	splitButtsCentArr = splitPairs(buttsCentArr);
+	createWinners(splitButtsCentArr,distrObCent);
+	var winCent = wOn[0];
+	var distrObFin = wOn[1];
+	distrObFin.reverse();
+}
