@@ -336,6 +336,8 @@ function sriLankaDist() {
 		};
 	};
 
+	score.textContent = "Which " + sriLankaDistricts[0].dataType + " of " + sriLankaDistricts[0].country + " have the largest populations?";
+
 	init();
 };
 
@@ -364,13 +366,15 @@ function indiaStat() {
 	};
 
 	init();
+
+	score.textContent = "Which " + indiaStates[0].dataType + " of " + indiaStates[0].country + " have the largest populations?";
 };
 
 function init() {
 
 	// Assigns (randomized) names to HTML outer divs
 	for (var i = districts.length - 1; i >= 0; i--) {
-		buttsArr[i].textContent = (districts[i].name);
+		buttsArr[i].textContent = districts[i].name;
 	};
 
 	// Splits buttsArr(s) in pairs, compares for larger one in each pair, creates list of 'winners' for each pair
