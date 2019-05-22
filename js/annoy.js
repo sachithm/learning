@@ -1,6 +1,6 @@
 var answer = prompt("Are we there yet?");
 
-while (answer !== "yes" && answer !== "yeah") {
+while (answer !== "yes" && answer !== "yeah" && answer !== "yep") {
 	prompt("Are we there yet?")
 }
 
